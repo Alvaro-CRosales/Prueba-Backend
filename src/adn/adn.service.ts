@@ -128,6 +128,12 @@ export class AdnService {
         const ratio: number = Number(count_mutation) / Number(count_noMutation);
         ratio.toPrecision(2);
         return {mutation:false,message:{count_mutation, count_noMutation, ratio}}
+    
+    }
+
+    public static async list(): Promise<IResponseModel> {
+        const result = (await pool.query(`SELECT * FROM adn.adn.results`)).rows
+        return {mutation:false, message:{result}}
     }
 
 }

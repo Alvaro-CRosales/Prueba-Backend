@@ -5,5 +5,6 @@ export const adnRouter = router();
 
 adnRouter
     .get('/stats', AdnCtrl.stats)
+    .get('/list', AdnCtrl.list)
     .post('/', AdnCtrl.hasMutation);
     
