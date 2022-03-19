@@ -1,5 +1,6 @@
 import {app} from './app';
 import env from './config/env';
+import {connect} from './database/postgres'
 
 app.listen(env.PORT, (error?: Error) => {
   if (error) {
@@ -8,3 +9,5 @@ app.listen(env.PORT, (error?: Error) => {
     console.log(`app running on port: ${env.PORT}`);
   }
 });
+
+connect();

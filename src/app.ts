@@ -13,4 +13,4 @@ app.use(morgan('tiny'));
 
 app.use(cors());
 
-app.use("/adn", adnRouter);
+app.use("/mutation", adnRouter);
