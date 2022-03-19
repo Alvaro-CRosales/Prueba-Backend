@@ -13,4 +13,8 @@ app.use(morgan('tiny'));
 
 app.use(cors());
 
+app.use("/", (req,res)=>{
+    res.send("Hola")
+})
+
 app.use("/mutation", adnRouter);
